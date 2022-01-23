@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PNG-Viewer.dir/main.c.o"
   "CMakeFiles/PNG-Viewer.dir/main.c.o.d"
+  "CMakeFiles/PNG-Viewer.dir/src/functions.c.o"
+  "CMakeFiles/PNG-Viewer.dir/src/functions.c.o.d"
   "PNG-Viewer"
   "PNG-Viewer.pdb"
 )

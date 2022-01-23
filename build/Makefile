@@ -153,6 +153,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/main.c.s
 .PHONY : main.c.s
 
+src/functions.o: src/functions.c.o
+.PHONY : src/functions.o
+
+# target to build an object file
+src/functions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/src/functions.c.o
+.PHONY : src/functions.c.o
+
+src/functions.i: src/functions.c.i
+.PHONY : src/functions.i
+
+# target to preprocess a source file
+src/functions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/src/functions.c.i
+.PHONY : src/functions.c.i
+
+src/functions.s: src/functions.c.s
+.PHONY : src/functions.s
+
+# target to generate assembly for a file
+src/functions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/src/functions.c.s
+.PHONY : src/functions.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/functions.o"
+	@echo "... src/functions.i"
+	@echo "... src/functions.s"
 .PHONY : help
 
 

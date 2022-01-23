@@ -81,12 +81,12 @@ clean: CMakeFiles/PNG-Viewer.dir/clean
 CMakeFiles/PNG-Viewer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles --progress-num=1,2 "Built target PNG-Viewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles --progress-num=1,2,3 "Built target PNG-Viewer"
 .PHONY : CMakeFiles/PNG-Viewer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PNG-Viewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/PNG-Viewer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles 0
 .PHONY : CMakeFiles/PNG-Viewer.dir/rule
