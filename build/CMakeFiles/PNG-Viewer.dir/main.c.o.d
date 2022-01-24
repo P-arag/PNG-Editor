@@ -49,7 +49,10 @@ CMakeFiles/PNG-Viewer.dir/main.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/wchar.h \
- /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h \
  /home/parag/Desktop/Projects/PNG-Editor/include/structs.h \
  /usr/lib/gcc/x86_64-linux-gnu/10/include/stdbool.h \
  /home/parag/Desktop/Projects/PNG-Editor/include/functions.h

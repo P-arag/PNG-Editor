@@ -58,6 +58,10 @@ CMakeFiles/PNG-Viewer.dir/main.c.o: ../main.c \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/string.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/strings.h \
   ../include/structs.h \
   /usr/lib/gcc/x86_64-linux-gnu/10/include/stdbool.h \
   ../include/functions.h
@@ -118,12 +122,18 @@ CMakeFiles/PNG-Viewer.dir/src/functions.c.o: ../src/functions.c \
   /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h \
   /usr/include/stdint.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
-  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  ../include/structs.h \
+  /usr/lib/gcc/x86_64-linux-gnu/10/include/stdbool.h
 
 
 ../src/functions.c:
 
 ../include/functions.h:
+
+../include/structs.h:
+
+/usr/include/strings.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
@@ -140,6 +150,10 @@ CMakeFiles/PNG-Viewer.dir/src/functions.c.o: ../src/functions.c \
 /usr/include/features.h:
 
 ../main.c:
+
+/usr/lib/gcc/x86_64-linux-gnu/10/include/stdbool.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -165,13 +179,13 @@ CMakeFiles/PNG-Viewer.dir/src/functions.c.o: ../src/functions.c \
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
-../include/structs.h:
-
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/stdio.h:
 
@@ -195,6 +209,8 @@ CMakeFiles/PNG-Viewer.dir/src/functions.c.o: ../src/functions.c \
 
 /usr/include/stdlib.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
@@ -214,6 +230,8 @@ CMakeFiles/PNG-Viewer.dir/src/functions.c.o: ../src/functions.c \
 /usr/lib/gcc/x86_64-linux-gnu/10/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/string.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -238,7 +256,3 @@ CMakeFiles/PNG-Viewer.dir/src/functions.c.o: ../src/functions.c \
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/10/include/stdbool.h:
