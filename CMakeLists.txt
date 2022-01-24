@@ -4,5 +4,6 @@ project(PNG-Viewer
         DESCRIPTION "View png images in a powerful hex editor"
         LANGUAGES C)
 
-add_executable(PNG-Viewer main.c)
+file(GLOB_RECURSE SRC_FILES src/*.c)
+add_executable(PNG-Viewer main.c ${SRC_FILES})
 target_include_directories(PNG-Viewer PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
