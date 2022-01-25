@@ -22,6 +22,7 @@ int main() {
 
     while(1) {
         Chunk c;
+        
         printf("--------\n");
         read_bytes(f, &c.size, sizeof(c.size)); // 4byte chunk len 
         reverse_bytes(&c.size, sizeof(c.size));
@@ -39,10 +40,12 @@ int main() {
             parse_IHDR(f, &img, &c);
             continue;
         } else if(strcmp(c.type, "IEND") == 0) {
+            read_bytes(f, &c.CRC, 4);
             break;
         }
 
         fseek(f, c.size+4, SEEK_CUR);
+//TODO: Parse IDAT chunk using zlib
         //parse_IHDR(f, &img, &c);
     }
     
@@ -50,5 +53,9 @@ int main() {
         printf("%s\n", img.chunks[i].type);
      }*/
 
+    uint8_t tailed_data[10];
+    check_tailed_data(f, tailed_data, 10);  
+    printf("Tailed data <: ");
+    print_bytes(tailed_data, 10);
     fclose(f);
 }

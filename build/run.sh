@@ -1,4 +1,5 @@
+rm ./PNG-Editor
 cmake ..
 make
 echo ""
-./PNG-Viewer
+./PNG-Editor

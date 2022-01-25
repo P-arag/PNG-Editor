@@ -39,5 +39,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/PNG-Viewer.dir/DependInfo.cmake"
+  "CMakeFiles/PNG-Editor.dir/DependInfo.cmake"
   )

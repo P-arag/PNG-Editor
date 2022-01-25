@@ -10,7 +10,6 @@ typedef struct Chunk {
     uint32_t size; 
     char type[5]; //4 byte type, extra byte for null termination
     uint32_t CRC;
-
 } Chunk;
 
 typedef struct {
@@ -20,6 +19,4 @@ typedef struct {
     uint8_t bitDepth, colorType, methods[3]; //Compression, Filter, Interlace methods
     uint32_t totalChunks;
     Chunk chunks[10];
-    
-
 } Image;

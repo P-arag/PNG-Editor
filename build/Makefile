@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named PNG-Viewer
+# Target rules for targets named PNG-Editor
 
 # Build rule for target.
-PNG-Viewer: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PNG-Viewer
-.PHONY : PNG-Viewer
+PNG-Editor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 PNG-Editor
+.PHONY : PNG-Editor
 
 # fast build rule for target.
-PNG-Viewer/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/build
-.PHONY : PNG-Viewer/fast
+PNG-Editor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/build
+.PHONY : PNG-Editor/fast
 
 main.o: main.c.o
 .PHONY : main.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -142,7 +142,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -150,7 +150,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/main.c.s
 .PHONY : main.c.s
 
 src/functions.o: src/functions.c.o
@@ -158,7 +158,7 @@ src/functions.o: src/functions.c.o
 
 # target to build an object file
 src/functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/src/functions.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/functions.c.o
 .PHONY : src/functions.c.o
 
 src/functions.i: src/functions.c.i
@@ -166,7 +166,7 @@ src/functions.i: src/functions.c.i
 
 # target to preprocess a source file
 src/functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/src/functions.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/functions.c.i
 .PHONY : src/functions.c.i
 
 src/functions.s: src/functions.c.s
@@ -174,7 +174,7 @@ src/functions.s: src/functions.c.s
 
 # target to generate assembly for a file
 src/functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Viewer.dir/build.make CMakeFiles/PNG-Viewer.dir/src/functions.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/functions.c.s
 .PHONY : src/functions.c.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... PNG-Viewer"
+	@echo "... PNG-Editor"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
