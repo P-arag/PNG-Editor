@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/PNG-Viewer.dir/main.c.o CMakeFiles/PNG-Viewer.dir/src/functions.c.o -o PNG-Viewer 
