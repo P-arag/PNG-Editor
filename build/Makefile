@@ -153,29 +153,77 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/main.c.s
 .PHONY : main.c.s
 
-src/functions.o: src/functions.c.o
-.PHONY : src/functions.o
+src/bytes.o: src/bytes.c.o
+.PHONY : src/bytes.o
 
 # target to build an object file
-src/functions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/functions.c.o
-.PHONY : src/functions.c.o
+src/bytes.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/bytes.c.o
+.PHONY : src/bytes.c.o
 
-src/functions.i: src/functions.c.i
-.PHONY : src/functions.i
+src/bytes.i: src/bytes.c.i
+.PHONY : src/bytes.i
 
 # target to preprocess a source file
-src/functions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/functions.c.i
-.PHONY : src/functions.c.i
+src/bytes.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/bytes.c.i
+.PHONY : src/bytes.c.i
 
-src/functions.s: src/functions.c.s
-.PHONY : src/functions.s
+src/bytes.s: src/bytes.c.s
+.PHONY : src/bytes.s
 
 # target to generate assembly for a file
-src/functions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/functions.c.s
-.PHONY : src/functions.c.s
+src/bytes.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/bytes.c.s
+.PHONY : src/bytes.c.s
+
+src/chunks.o: src/chunks.c.o
+.PHONY : src/chunks.o
+
+# target to build an object file
+src/chunks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/chunks.c.o
+.PHONY : src/chunks.c.o
+
+src/chunks.i: src/chunks.c.i
+.PHONY : src/chunks.i
+
+# target to preprocess a source file
+src/chunks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/chunks.c.i
+.PHONY : src/chunks.c.i
+
+src/chunks.s: src/chunks.c.s
+.PHONY : src/chunks.s
+
+# target to generate assembly for a file
+src/chunks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/chunks.c.s
+.PHONY : src/chunks.c.s
+
+src/misc.o: src/misc.c.o
+.PHONY : src/misc.o
+
+# target to build an object file
+src/misc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/misc.c.o
+.PHONY : src/misc.c.o
+
+src/misc.i: src/misc.c.i
+.PHONY : src/misc.i
+
+# target to preprocess a source file
+src/misc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/misc.c.i
+.PHONY : src/misc.c.i
+
+src/misc.s: src/misc.c.s
+.PHONY : src/misc.s
+
+# target to generate assembly for a file
+src/misc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PNG-Editor.dir/build.make CMakeFiles/PNG-Editor.dir/src/misc.c.s
+.PHONY : src/misc.c.s
 
 # Help Target
 help:
@@ -189,9 +237,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/functions.o"
-	@echo "... src/functions.i"
-	@echo "... src/functions.s"
+	@echo "... src/bytes.o"
+	@echo "... src/bytes.i"
+	@echo "... src/bytes.s"
+	@echo "... src/chunks.o"
+	@echo "... src/chunks.i"
+	@echo "... src/chunks.s"
+	@echo "... src/misc.o"
+	@echo "... src/misc.i"
+	@echo "... src/misc.s"
 .PHONY : help
 
 

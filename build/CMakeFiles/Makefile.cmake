@@ -20,10 +20,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.21/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.21/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.21/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.21/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-3.21/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.21/Modules/FindZLIB.cmake"
   "/usr/share/cmake-3.21/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.21/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.21/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.21/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.21/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
