@@ -1,3 +1,0 @@
-/home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles/rebuild_cache.dir
-/home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles/edit_cache.dir
-/home/parag/Desktop/Projects/PNG-Editor/build/CMakeFiles/PNG-Editor.dir
