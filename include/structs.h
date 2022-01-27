@@ -11,7 +11,7 @@ typedef struct Chunk {
     char type[5]; //4 byte type, extra byte for null termination
     uint32_t CRC;
     struct Chunk *nextChunk;
-    uint8_t data[];
+    uint8_t *data;
 } Chunk;
 
 typedef struct {

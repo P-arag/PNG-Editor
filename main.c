@@ -11,7 +11,9 @@ uint8_t VALID_PNG_HEADER[] = {137, 80, 78, 71, 13, 10, 26, 10};
 
 int main() {
     FILE *f = fopen("../images/img_extra_smol.png", "rb");
-    Image img;
+    Image img = *(Image *) malloc(sizeof(Image));
+    //Image img;
+    
     img.totalChunks = 0;
     img.head = img.tail = NULL;
 
@@ -60,8 +62,7 @@ int main() {
             printf("CRC <: %d\n", c->CRC);
             break;
         }
-        //fseek(f, c->size+4, SEEK_CUR);
-        //TODO: Parse IDAT chunk using zlib
+     fseek(f, c->size+4, SEEK_CUR);
     }
 
     /*

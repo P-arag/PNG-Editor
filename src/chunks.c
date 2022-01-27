@@ -41,10 +41,11 @@ void parse_IHDR(FILE *f, Image *img, Chunk *c) {
 
 void parse_IDAT(FILE *f, Image *img, Chunk *c) {
     printf("=========IDAT=========\n");
-    uint8_t chunkData[c->size];
+
+    uint8_t *chunkData = (uint8_t *) malloc(c->size);
+
     read_bytes(f, chunkData, c->size);
     uint8_t pixelMultipler = 0;
-
 
     switch(img->colorType) {
         case 2:  // Each pixel is an RGB triple
@@ -60,13 +61,19 @@ void parse_IDAT(FILE *f, Image *img, Chunk *c) {
 
 
     printf("Pixel Multiplier <: %zu\n", pixelMultipler);
-    uint32_t uncompressedDataSize = img->width*pixelMultipler*img->height + img->height; //  width*pixelMultipler * height + plus 1 extra byte per row for filterType
+    uint32_t uncompressedDataSize = img->width*pixelMultipler*img->height + img->height;
+    
     printf("Uncompressed size <: %d\n", uncompressedDataSize);
-    uint8_t out[uncompressedDataSize];
 
-    decompress(chunkData, c->size, out, uncompressedDataSize);
-
-    print_bytes(out, uncompressedDataSize);
+    decompress(chunkData, c->size, chunkData, uncompressedDataSize);
+     
+    c->size = uncompressedDataSize;
+    chunkData = (uint8_t *) realloc(chunkData, uncompressedDataSize); // Shorten the length of chunkData array
+    c->data = chunkData;
+    
+    for(int i=0; i<c->size; i++) {
+       //TODO: Apply filter to decompressed data and print pixels nicely, 
+    }
 
     read_bytes(f, &c->CRC, 4);
     printf("CRC <: %d\n", c->CRC);
