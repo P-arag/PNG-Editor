@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/PNG-Editor.dir/main.c.o CMakeFiles/PNG-Editor.dir/src/bytes.c.o CMakeFiles/PNG-Editor.dir/src/chunks.c.o CMakeFiles/PNG-Editor.dir/src/misc.c.o -o PNG-Editor  -lz 
