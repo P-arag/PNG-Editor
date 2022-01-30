@@ -62,19 +62,49 @@ void parse_IDAT(FILE *f, Image *img, Chunk *c) {
 
     printf("Pixel Multiplier <: %zu\n", pixelMultipler);
     uint32_t uncompressedDataSize = img->width*pixelMultipler*img->height + img->height;
-    
+
     printf("Uncompressed size <: %d\n", uncompressedDataSize);
 
     decompress(chunkData, c->size, chunkData, uncompressedDataSize);
-     
     c->size = uncompressedDataSize;
-    chunkData = (uint8_t *) realloc(chunkData, uncompressedDataSize); // Shorten the length of chunkData array
-    c->data = chunkData;
-    
-    for(int i=0; i<c->size; i++) {
-       //TODO: Apply filter to decompressed data and print pixels nicely, 
-    }
 
+    //print_bytes(chunkData, c->size);   
+
+    uint8_t parsedChunk[c->size];
+    memset(parsedChunk, 0, c->size);   
+
+    int t=0, stride=img->width*pixelMultipler;
+    
+    for(int i=0; i<img->height; i++) {
+        uint8_t filterType = chunkData[t];
+        t++;
+        
+        for(int j=0; j<stride; j++) {
+            uint8_t filtX = chunkData[t]; // byte to be filtered
+            uint8_t byteToAdd = 0;
+
+            switch(filterType) {
+                case 0: // No filter
+                    byteToAdd = 0;
+                    break;
+                case 1: // Sub filter 
+                    byteToAdd = (j/pixelMultipler != 0) ? parsedChunk[t-pixelMultipler] : 0;
+                    break;
+                default:
+                    printf("ERROR: We don't support filter type %u\n", filterType);
+                    exit(1);
+            }
+
+            parsedChunk[t] = filtX + byteToAdd;
+            t++;
+        }  
+    }
+    
+    free(chunkData);
+
+    c->data = parsedChunk;
+    print_bytes(c->data, c->size);
+   
     read_bytes(f, &c->CRC, 4);
     printf("CRC <: %d\n", c->CRC);
 

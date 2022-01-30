@@ -31,7 +31,10 @@ void reverse_bytes(void *buf, size_t buf_sz) {
 
 void print_bytes(uint8_t *buf, size_t len) {
     for(int i=0; i<len; i++) {
-        printf("%zu ", buf[i]);
+        printf("%zu", buf[i]);
+        if(i != len-1) {
+            printf(", ");
+        }
     }
     printf("\n");
 }
