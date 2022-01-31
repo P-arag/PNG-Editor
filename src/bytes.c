@@ -1,4 +1,5 @@
 // Everything realted to bytes
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdint.h>
@@ -10,10 +11,10 @@ void read_bytes(FILE *f, void *buffer, size_t buf_sz) {
 
     if (n != 1) {
         if (ferror(f)) {
-            fprintf(stderr, "ERROR: could not read %zu bytes from f", buf_sz);
+            fprintf(stderr, "ERROR: could not read %u bytes from f", buf_sz);
             exit(1);
         } else if (feof(f)) {
-            fprintf(stderr, "ERROR: could not read %zu bytes from f: reached the end of file\n",
+            fprintf(stderr, "ERROR: could not read %u bytes from f: reached the end of file\n",
                     buf_sz);
             exit(1);
         }

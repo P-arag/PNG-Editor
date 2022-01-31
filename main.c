@@ -6,6 +6,7 @@
 #include "bytes.h"
 #include "chunks.h"
 #include "misc.h"
+#include "logging.h"
 
 uint8_t VALID_PNG_HEADER[] = {137, 80, 78, 71, 13, 10, 26, 10};
 
@@ -22,7 +23,7 @@ int main() {
     print_bytes(img.sig, 8);
 
     if(memcmp(img.sig, VALID_PNG_HEADER, 8) != 0) {
-        printf("WARNING: Image does not appear to be a valid png image, wrong header\n");
+        print_warning("WARNING: Image does not appear to be a valid png image, wrong header\n");
     };
 
     while(1) {
@@ -76,9 +77,11 @@ int main() {
     printf("--------\n");
 
     uint8_t tailed_data[10];
-    check_tailed_data(f, tailed_data, 10);
-    printf("Tailed data <: ");
-    print_bytes(tailed_data, 10);
+    bool isTailed = check_tailed_data(f, tailed_data, 10);
+    if(isTailed) {
+        printf("Tailed data <: ");
+        print_bytes(tailed_data, 10);
+    }
     fclose(f);
 }
 // Linked list branch

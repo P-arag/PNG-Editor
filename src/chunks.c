@@ -21,7 +21,7 @@ void parse_IHDR(FILE *f, Image *img, Chunk *c) {
     read_bytes(f, &img->bitDepth, 1);
     read_bytes(f, &img->colorType, 1);
 
-    printf("Color Type <: %zu, Bit Depth <: %zu\n", img->colorType, img->bitDepth);
+    printf("Color Type <: %u, Bit Depth <: %u\n", img->colorType, img->bitDepth);
 
     read_bytes(f, &img->methods, 3);
 
